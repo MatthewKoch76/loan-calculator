@@ -1,7 +1,7 @@
-document.getElementById('loan-form').addEventListener('submit', function(e){
+document.getElementById('loan-form').addEventListener('submit', function (e) {
   document.getElementById('results').style.display = 'none';
   document.getElementById('loading').style.display = 'block';
-  setTimeout(calculateResults, 2000);
+  setTimeout(calculateResults, 800);
 
   e.preventDefault();
 });
@@ -24,7 +24,7 @@ function calculateResults() {
   if (isFinite(monthly)) {
     monthlyPayment.value = monthly.toFixed(2);
     totalPayment.value = (monthly * calculatedPayments).toFixed(2);
-    totalInterest.value = ((monthly * calculatedPayments)-principal).toFixed(2);
+    totalInterest.value = ((monthly * calculatedPayments) - principal).toFixed(2);
 
     document.getElementById('results').style.display = 'block';
 
@@ -34,26 +34,26 @@ function calculateResults() {
   }
 }
 
-function showError(error){
+function showError(error) {
 
   document.getElementById('results').style.display = 'none';
 
   document.getElementById('loading').style.display = 'none';
 
   const errorDiv = document.createElement('div');
-  
+
   const card = document.querySelector('.card');
-  const heading = document.querySelector('.heading');
+  const results = document.querySelector('.results');
 
   errorDiv.className = 'alert alert-danger';
   errorDiv.appendChild(document.createTextNode(error));
 
-  card.insertBefore(errorDiv, heading);
+  card.insertBefore(errorDiv, results);
 
   setTimeout(clearError, 3000);
 
 }
 
-function clearError(){
-document.querySelector('.alert').remove();
+function clearError() {
+  document.querySelector('.alert').remove();
 }
