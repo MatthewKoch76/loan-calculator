@@ -10,7 +10,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <link rel="stylesheet" type="text/css" href="app.css">
+ 
   <title>Hello, world!</title>
+  <style>
+    #loading, #results {
+      display: none;
+    }
+  </style>
 </head>
 
 <body class="bg-dark">
@@ -40,9 +47,9 @@
             </div>
           </form>
           <!-- Loader -->
-          <!-- <div id="loading">
+          <div id="loading">
             <img src="img/loading.gif" alt="">
-          </div> -->
+          </div>
           <!-- Results -->
           <div id="results" class="pt-4">
             <h5>Results</h5>
@@ -81,7 +88,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
